@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回到頂端浮標</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {background-color: whitesmoke;padding: 20px;margin: 10px;}
+        #myTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border:none;
+            outline:none;
+            background-color: #a2a2a2;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;}
+        #myTop:hover{background-color: #34cb5c;}
+    </style>
+</head>
+<body>
+    <button onclick="topFunction()" id="myTop" title="top">Top</button>
+    <script>
+        var mybutton = document.getElementById('myTop');//定義
+        window.onscroll = function(){scrollFunction()};//定義網頁的變動，造成使用的動作
+        //內建指令拼對***It is scroll not scorll.
+        function scrollFunction(){//定義圖標怎麼出現
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                mybutton.style.display = 'block';
+            }
+            else{
+                mybutton.style.display = 'none';
+            }
+        }
+        function topFunction(){//定義按下圖標有什麼動作
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+    <script>//jQuery練習
+
+        $('#test').ready(function(){alert("Anti-Hepatocellular carcinoma");});
+        $(document).ready(function(){$('p').hover(function(){$(this).css("color","skyblue");},
+                                                  function(){$(this).css("color", "black" );});});//Use the .hover have to create two function
+        //$(document).ready(function(){$('h1,h2').hover(function(){$(this).css("color","red").css("background-color","lightgreen");}
+                                                            //,function(){$(this).css("color","black").css('background-color',"whitesmoke");});});
+    </script>
+    <p id="test"></p>
+    <h1 class="intro" id="intro">Abstract</h1>
+    <p>
+        Hepatocellular Carcinoma (HCC) is one of higher malignant in cancers of human in the world. In addition, 
+    HCC mortality rate for 20 years is the leading cause of cancer death in Taiwan. The primary carcinogenic factors 
+    includes hepatitis virus infection and other are caused by alcohol abuse, and ingestion of carcinogen such as aflatoxin, etc.
+     HCC has the characteristics of high level metastasis, angiogenesis, and recurrence after surgery.
+    
+        In this study, we focused on how to effectively prevent metastasis and angiogenesis of HCC. Recently, it becomes important to
+    use the Chinese Herbal Medicine (CHM) as a therapeutic strategy for the treatment of diseases. Here, we found that among 10 kinds of CHMs, 
+    M1 could inhibit the cell migration at the dose less than half concentration of IC<sub>50</sub> (the half maximal inhibitory of 
+    concentration). M1 significantly inhibited the expression of Receptor Tyrosine Kinase, Epidermal Growth Factor Receptor (EGFR)
+    , and downstream, Ras, ERK, and Snail. 
+
+        Furthermore, another downstream pathway protein, Protein Kinase B (AKT), mammalian target 
+    of rapamycin (mTOR), Hypoxia-inducible factor 1-alpha (HIF1-α), and Vascular Endothelial Growth Factor A (VEGFA) were also 
+    inhibited. And the Matrix Metalloproteinases (MMPs), including MMP-2, MMP-9, which play an important role in metastasis 
+    mechanism, were also inhibited by M1. Epithelial–mesenchymal transition (EMT) markers, such as E-cadherin and N-cadherin, 
+    were effective altered by M1 treatment.
+    
+        In the xenograft mice model, we observed the tumors growth sizes, weight, and protein
+    expressions were effectively inhibited by M1. In conclusions, we demonstrate that M1 has an inhibitory effect to suppress 
+    angiogenesis and metastasis of HCC in vitro and in vivo.
+    </p>
+    <p class="keyword">Key Word: Hepatocellular Carcinoma, Chinese Herbal Medicine, Angiogenesis, Metastasis, EGFR, MMPs</p>
+
+    <h1 class="intro">Introduction</h1>
+    <h2 class="intro">1. Hepatocellular carcinoma (HCC)</h2>
+    <p class="intro">
+        HCC has a high prevalence in Asia and North Africa because of the high frequency of chronic hepatitis B virus and hepatitis C virus 
+        infections in these areas<sup>1-3</sup>. Furthermore, uptake of aflatoxin, alcohol abuse, diabetes, obesity, and metabolic disorders are also 
+        the key risk factors<sup>1,3,4</sup>. The radical therapy is usually used to treat HCC in early-stage, but the occurrence and the metastasis cause 
+        the poor prognosis<sup>2-5</sup>. In recent years, sorafenib is the first molecule drug to show clinical application for liver cancer<sup>2</sup>. 
+        However, sorafenib has a count of restrictions, including the development of resistance and adverse effects<sup>6</sup>.
+    </p>
+    <h2>2. Epidermal growth factor receptor (EGFR)</h2>
+    <p class="intro">
+        Overexpression of EGFR is associated with liver cirrhosis and HCC<sup>7</sup>, and the high expression of EGER has been implicated in HCC-related 
+        tumor metastasis and poor patient survival<sup>7-9</sup>. Furthermore, the activation of EGFR causes the activation of downstream effectors, such 
+        as the Protein Kinase B (PKB, as known as AKT)/mammalian target of rapamycin (mTOR) pathway and Rat sarcoma (Ras)/extracellular 
+        signal–regulated kinases (Ras/ERK) pathway<sup>10,11</sup>. In clinical trials, gefitinib has been demonstrated discouraged results, so that the 
+        investigations of effective inhibitors of EGFR have been emerged as the current trend<sup>8</sup>.
+    </p>
+    <h2>3. Angiogenesis</h2>
+    <p class="intro">
+        Vascular Endothelial Growth Factors (VEGFs) play important roles in angiogenesis in cancers, and VEGF-A is a major member in VEGFs family that 
+        binds to VEGF receptors of the cell membrane to stimulate downstream streams<sup>12-17</sup>. For example, the activation of downstream effectors 
+        including AKT, mTOR, 4E-binding protein 1 (4EBP1), and Hypoxia-inducible factor 1-alpha (HIF1-α), regulates angiogenesis, migration, and invasion 
+        of tumor cells<sup>13,16,18-20</sup>. In addition, Matrix metalloproteinases (MMPs), have influences on matrix degradation, invasion, metastasis,
+         and cause angiogenesis during tumor progression<sub>13,15,18</sub>. Therefore, VEGFs and MMPs could be the targets to reduce the
+         angiogenesis<sup>13,19</sup>.
+    </p>
+    <h2>4. Epithelial–mesenchymal transition (EMT) / Metastasis</h2>
+    <p class="intro">
+        EMT has been reported in various cancer progressions, such as tumor growth, invasion, and metastasis<sup>21-24</sup>. The features of EMT are the 
+        disruption of intercellular contacts, matrix remodeling, invasion and migration through altering the cell-cell adhesion<sup>21,24,25</sup>. Ras/ERK 
+        pathway is the main mediator arising migration of tumor cells through the suppression of E-cadherin, a calcium dependent cell-cell adhesion molecule 
+        that plays a critical role in keeping epithelial cell feature, but the upregulation of N-cadherin, which is the marker of mesenchymal type cells
+        <sup>21,22,24,26</sup>. Furthermore, the high expression of snail downregulates epithelial genes but activates mesenchymal genes to induce the 
+        transformation of cell<sup>25</sup>. Similarly, MMPs also promote the metastasis process though degrading the ECM leading to the mesenchymal-type 
+        cells migration<sup>21,23</sup>. Therefore, it is important to suppress metastasis by inhibiting EMT and MMPs to reach an effective anti-cancer 
+        strategy.
+    </p>
+    <h2>5. Chinese Herbal Medicines (CHMs)</h2>
+    <p class="intro">
+        CHMs are known to mitigate clinical symptoms, prevent metastasis as well as recurrence, and delay progression of tumors<sup>27</sup>. For example,
+         curcumin, the active principle of <u><i>Curcuma longa</i></u>, has multiple functions such as antioxidant, anti-inflammatory, and anti-carcinogenic activities 
+         that inhibit the cell proliferation, cell cycle and apoptosis<sup>28</sup>. <u>Songyou Yin</u> possesses anti-metastatic activity by inhibiting
+          the expressions of MMP-2 and VEGFs<sup>29</sup>. Additionally, <u>Coptidis Rhizoma</u> inhibits tumor cell migration through reducing F-actin 
+          polymerization<sup>30</sup>. Therefore, researches on CHMs toward cancer therapy have attracted much attention to develop as an alternative
+           therapeutic strategy.
+    </p>
+    <h2>6. HCC Huh-7 cell line</h2>
+    <p class="intro">
+       <u> P53 </u> mutation is a carcinogenesis important factor<sup>31</sup>. Huh-7 cell line, a well-differential hepatocellular carcinoma, has a <u>p53</u> 
+       gene mutation at codon 220 (A:T→G:C) from a 57 years old male in Japan<sup>6</sup>. Huh-7 cells do not have virus DNA so that the virus interference 
+       can be removed, and have been used for the liver cancer study<sup>6</sup>.
+    </p>
+    <h2>7. Research objectives of present investigation</h2>
+    <p class="intro">
+        In this study, we purposed to identify effective CHMs that could inhibit the liver tumor growth, such as migration, EMT, proliferation, and angiogenesis.
+         Using IC<sub>50 MTT</sub>/ IC<sub>50 wound healing</sub> ratio, we selected the most effective one from 10 kinds of CHMs. <i>In vitro</i>, the liver 
+         cancer proteins, EGFR and downstream pathways such as AKT and ERK signalings were determined. <i>In vivo</i>, mice xenograft models and the tumors marker 
+         were examined to demonstrate the anti-cancer ability of CHM.
+    </p>
+    <h2></h2>
+    <p></p>
+    <h2></h2>
+    <p></p>
+    <h2></h2>
+    <p></p>
+    </article>
+    <script>
+        $(function(){
+	$.fn.snow({ 
+		Container:'.aixin',//这里是你想在哪个元素处出现雪花，这里可以是class也可以是id
+		minSize: 5,		//雪花的最小尺寸
+		maxSize: 50, 	//雪花的最大尺寸
+		newOn: 300,		//雪花出现的频率 这个数值越小雪花越多
+		content:'<img src="snow.svg" style="width:100%">',//这里是你想用的图片，如果不写这行代码，则默认为雪花
+		documentHeight :$(".aixin").height(),
+		documentWidth :$(".aixin").width(),
+		flakeColor	: "#ff2727"
+	});
+});
+    </script>
+    <script>
+        (function($){
+	
+	$.fn.snow = function(options){
+	
+			var $flake 			= $('<div id="snowbox" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10052;'),
+				documentHeight 	= $(document).height(),
+				documentWidth	= $(document).width(),
+				defaults		= {
+									minSize		: 10,		//闆姳鐨勬渶灏忓昂瀵�
+									maxSize		: 20,		//闆姳鐨勬渶澶у昂瀵�
+									newOn		: 1000,		//闆姳鍑虹幇鐨勯鐜�
+									flakeColor	: "#FFFFFF"	
+								},
+				options			= $.extend({}, defaults, options);
+			
+			var interval		= setInterval( function(){
+				var startPositionLeft 	= Math.random() * documentWidth - 100,
+				 	startOpacity		= 0.5 + Math.random(),
+					sizeFlake			= options.minSize + Math.random() * options.maxSize,
+					endPositionTop		= documentHeight - 100,
+					endPositionLeft		= startPositionLeft - 100 + Math.random() * 100,
+					durationFall		= documentHeight * 10 + Math.random() * 5000;
+				$flake.clone().appendTo('body').css({
+							left: startPositionLeft,
+							opacity: startOpacity,
+							'font-size': sizeFlake,
+							color: options.flakeColor
+						}).animate({
+							top: endPositionTop,
+							left: endPositionLeft,
+							opacity: 0.2
+						},durationFall,'linear',function(){
+							$(this).remove()
+						}
+					);
+					
+			}, options.newOn);
+	
+	};
+	
+})(jQuery);
+    </script>
+
+</body>
+</html>
