@@ -9,4 +9,5 @@ function Afunction(){
 document.body.scrollTop=0;
 document.documentElement.scrollTop=0;
 }
+Some training and effects for jQuery.
     
